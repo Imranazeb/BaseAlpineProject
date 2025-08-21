@@ -16,7 +16,7 @@ LOG_FORMAT = (
 )
 
 logger.add(
-    sink=LOG_DIR / "DEBUG.log", 
+    sink=LOG_DIR / "DEBUG.log",
     format=LOG_FORMAT,
     filter=lambda record: record["level"].no <= logger.level("WARNING").no,
     level="DEBUG",
@@ -43,11 +43,13 @@ logger.add(
     colorize=True,
 )
 
-# logger.debug("This is a debug message for testing purposes.")
-# logger.info("Logger initialized with custom format.")
-# logger.warning("This is a warning message for testing purposes.")
-# logger.critical("This is a critical message for testing purposes.")
-# logger.error("This is an error message for testing purposes.")
+def test_logger():
+    logger.debug("This is a debug message for testing purposes.")
+    logger.info("Logger initialized with custom format.")
+    logger.warning("This is a warning message for testing purposes.")
+    logger.critical("This is a critical message for testing purposes.")
+    logger.error("This is an error message for testing purposes.")
+
 
 def get_logger():
     return logger

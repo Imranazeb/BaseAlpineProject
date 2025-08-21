@@ -26,3 +26,9 @@ commit:
 	git add .
 	git commit
 	git push origin -u main
+
+# push changes without making a new commit
+add:
+	git add .
+	git commit --amend --no-edit
+	git push origin -u main
