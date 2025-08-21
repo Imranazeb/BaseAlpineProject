@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/src
+      - ./logs:/logs
+    environment:
+      - DEV=true
+    env_file:
+      - .env
+
+networks:
+  default:
+    driver: bridge

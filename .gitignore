@@ -1,0 +1,13 @@
+﻿.venv/
+__pycache__/
+logs/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.env.local
+!.env.example
+envs/
+!envs/env.example
+tempCodeRunnerFile.py

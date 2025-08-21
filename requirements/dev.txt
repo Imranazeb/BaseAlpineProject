@@ -1,0 +1,6 @@
+﻿black
+isort
+flake8
+
+-r requirements.txt
+
