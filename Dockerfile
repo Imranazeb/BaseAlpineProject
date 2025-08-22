@@ -17,7 +17,8 @@ RUN python -m venv /opt/venv \
     else \
         echo "Installing production dependencies..."; \
         /opt/venv/bin/pip install --no-cache-dir -r /tmp/requirements.txt; \
-    fi \
+    fi \ 
+    && rm -rf /tmp/* \
     && apk del .build-deps || true
 
 ENV PATH="/opt/venv/bin:$PATH"
