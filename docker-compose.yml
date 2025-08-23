@@ -3,11 +3,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        DEV: true
     volumes:
       - ./src:/src
       - ./logs:/logs
-    environment:
-      - DEV=true
     env_file:
       - .env
 
